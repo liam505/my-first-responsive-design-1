@@ -17,7 +17,8 @@ main{
     align-items:center;
     flex-direction:column;
     /* border: solid red 5px; */
-    height:85vh;
+    height:85%;
+    border: solid green 5px;
 }
 
 #logo{
@@ -25,6 +26,11 @@ main{
     border-radius:50%;
     width:100px;
     height:100px;
+    margin-left: 1vw;
+}
+
+#link{
+    margin-right:3vw;;
 }
 
 #frontLogo{
@@ -52,7 +58,7 @@ main{
     flex-wrap:wrap;
     border: solid black 5px;
     width:70%;
-    height:60vh;
+    height:60%;
     justify-content:space-between;
     align-content:space-around;
 }
@@ -85,15 +91,17 @@ main{
 }
 
 #restContainer{
-    /* border: solid black 5px; */
+    border: solid black 5px;
     display:flex;
     flex-wrap: wrap;
     width:70%;
-    height:85vh;
+    height:auto;
     align-content:space-evenly;
     justify-content:space-around;
     /* align-items:space-around; */
 }
+
+
 
 .restaurant{
     display:flex;
@@ -105,3 +113,56 @@ main{
     text-align: justify;
     padding:5px;
 }
+
+
+@media(max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+    #restContainer{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .restaurant{
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+    
+     #ingredientsContainer{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: space-between;
+    }
+    
+    .ingredient{
+        width: 100%;
+        margin-bottom: 1.5vh;
+        margin-top: 1.5vh;
+
+    }
+
+
+
+    #ingMain{
+        align-self: flex-end;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* border: solid 1px black; */
+    } 
+
+    main, .ingredient, #ingredientsContainer{
+        border: 0px;;
+    }
+
+    #dish{
+        border: 0px;
+    }
+
+    #dish img{
+        opacity: 0;
+    }
+
+  }
